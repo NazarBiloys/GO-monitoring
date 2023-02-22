@@ -8,19 +8,18 @@ Monitoring system with influexDB, grafana, telegraf (TIG) on GoLang
 - look at changes on boards in grafana.
 
 #### ES board
-![image](https://user-images.githubusercontent.com/51129612/220711576-0d95bb1a-ff4f-4a2d-bb97-631a2297f261.png)
-![image](https://user-images.githubusercontent.com/51129612/220711702-3208ae9f-5011-41bd-81a6-7a48c803e9d3.png)
-![image](https://user-images.githubusercontent.com/51129612/220711857-f3468355-3e97-460e-9bd2-84bbf018c6d3.png)
-![image](https://user-images.githubusercontent.com/51129612/220711898-437d8bf0-0785-464c-a035-5fb948778337.png)
+![image](https://user-images.githubusercontent.com/51129612/220761685-b5eff846-2801-45bb-8378-41255b587c89.png)
+![image](https://user-images.githubusercontent.com/51129612/220761751-e77a52af-9b4d-4565-bbbc-fbf3d8042030.png)
+![image](https://user-images.githubusercontent.com/51129612/220761813-38d03a04-6b10-4802-b04f-16b846d7f320.png)
+![image](https://user-images.githubusercontent.com/51129612/220761943-3ee42d04-2f40-40bf-842f-bee29dce718a.png)
+![image](https://user-images.githubusercontent.com/51129612/220762050-ce057fe0-7523-4b0f-9eef-da0be43cf50f.png)
 
 
 #### System board
-![image](https://user-images.githubusercontent.com/51129612/220712041-6579c615-f855-426c-9cb9-073779d20b44.png)
-![image](https://user-images.githubusercontent.com/51129612/220712090-5876c855-2f95-4714-bfe7-69afaff1a490.png)
-![image](https://user-images.githubusercontent.com/51129612/220712182-e5e1baac-6665-453a-b8be-bbaad51f065f.png)
-
+![image](https://user-images.githubusercontent.com/51129612/220761382-1e72708e-cd5f-4193-82fc-761aaba669f5.png)
+![image](https://user-images.githubusercontent.com/51129612/220761465-c894db56-12c3-492a-a043-bc9d040fb20d.png)
+![image](https://user-images.githubusercontent.com/51129612/220761534-69c0eef7-4cc5-45ae-856f-d8abe8d8d740.png)
 
 #### Mongo
-![image](https://user-images.githubusercontent.com/51129612/220712349-449f7bb7-3077-43da-8d46-71d5b0c3c56d.png)
-![image](https://user-images.githubusercontent.com/51129612/220712467-cb652111-8c7e-402d-b0ce-abd0627c88ee.png)
-
+![image](https://user-images.githubusercontent.com/51129612/220762118-b06e7560-3d76-43b9-a38c-961257911d81.png)
+![image](https://user-images.githubusercontent.com/51129612/220762142-50ddbfec-fa32-426f-9f68-20dadcb807ec.png)
