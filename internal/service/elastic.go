@@ -5,15 +5,17 @@ import (
 	"encoding/json"
 	"fmt"
 	elastic "github.com/olivere/elastic/v7"
+	"net"
 	"net/http"
 	"time"
-	"net"
 )
 
 var (
 	connectionUri = "http://elastic:9200"
 	index         = "student"
 )
+
+var mapResp map[string]interface{}
 
 type Student struct {
 	Name         string  `json:"name"`
@@ -40,6 +42,7 @@ func MakeStudent() error {
 		js := string(dataJSON)
 		_, err = esclient.Index().
 			Index(index).
+			Id("student").
 			BodyJson(js).
 			Do(ctx)
 
@@ -48,7 +51,31 @@ func MakeStudent() error {
 		}
 	}
 
-    return nil
+	return nil
+}
+
+func FetchFirstFiveStudent() (string, error) {
+	ctx := context.Background()
+	esclient, err := getESClient()
+	if err != nil {
+		return "", err
+	}
+
+	resp, err := esclient.Get().
+		Index(index).
+		Id("student").
+		Do(ctx)
+
+	if err != nil {
+		return "", err
+	}
+
+	result, err := json.Marshal(resp)
+	if err != nil {
+		return "", err
+	}
+
+	return string(result), nil
 }
 
 func getESClient() (*elastic.Client, error) {
