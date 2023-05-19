@@ -15,8 +15,6 @@ var (
 	index         = "student"
 )
 
-var mapResp map[string]interface{}
-
 type Student struct {
 	Name         string  `json:"name"`
 	Age          int64   `json:"age"`
@@ -39,6 +37,10 @@ func MakeStudent() error {
 			AverageScore: Float64(),
 		}
 		dataJSON, err := json.Marshal(newStudent)
+		if err != nil {
+			return err
+		}
+
 		js := string(dataJSON)
 		_, err = esclient.Index().
 			Index(index).

@@ -38,7 +38,7 @@ func MakeUser() error {
 	})
 
 	if err != nil {
-	    return err
+		return err
 	}
 
 	defer func() {
@@ -59,9 +59,14 @@ func FetchFirstFiveUser() (string, error) {
 
 	usersCollection := client.Database(table).Collection(collection)
 
-    filter := bson.D{}
+	filter := bson.D{}
 	opts := options.Find().SetLimit(5)
 	cursor, err := usersCollection.Find(context.TODO(), filter, opts)
+
+	if err != nil {
+		fmt.Println(err.Error())
+		return "", err
+	}
 
 	var results []User
 	if err = cursor.All(context.TODO(), &results); err != nil {
